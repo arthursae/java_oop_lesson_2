@@ -2,6 +2,10 @@ package SomeGame;
 
 public interface Health {
 
+    int getCurrentHealthLevel();
+
+    int getMaxHealthLevel();
+
     void showCurrentHealthLevel();
 
     void showMaxHealthLevel();
