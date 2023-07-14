@@ -1,12 +1,14 @@
 package SomeGame;
 
 public class Hero implements Health, Mana {
-    public int getMaxHealthPoint() {
-        return maxHealthPoint;
+    @Override
+    public int getCurrentHealthLevel() {
+        return currentHealthPoint;
     }
 
-    public int getCurrentHealthPoint() {
-        return currentHealthPoint;
+    @Override
+    public int getMaxHealthLevel() {
+        return maxHealthPoint;
     }
 
     public int getMaxManaPoint() {
@@ -29,6 +31,8 @@ public class Hero implements Health, Mana {
 
         this.currentHealthPoint = maxHealthPoint;
         this.currentManaPoint = maxManaPoint;
+
+        System.out.println("Hero");
     }
 
     public void setCurrentHealthPoint(int currentHealthPoint) {
@@ -92,6 +96,16 @@ public class Hero implements Health, Mana {
     @Override
     public void showMaxManaLevel() {
         System.out.println(maxManaPoint);
+    }
+
+    @Override
+    public int getCurrentManaLevel() {
+        return currentManaPoint;
+    }
+
+    @Override
+    public int getMaxManaLevel() {
+        return maxManaPoint;
     }
 
     @Override
