@@ -1,12 +1,14 @@
 package SomeGame;
 
 public class Neutral implements Health {
-    public int getMaxHealthPoint() {
-        return maxHealthPoint;
+    @Override
+    public int getCurrentHealthLevel() {
+        return currentHealthPoint;
     }
 
-    public int getCurrentHealthPoint() {
-        return currentHealthPoint;
+    @Override
+    public int getMaxHealthLevel() {
+        return maxHealthPoint;
     }
 
     private int maxHealthPoint; // максимально количество здоровья
@@ -15,6 +17,7 @@ public class Neutral implements Health {
     public Neutral(int maxHealthPoint) {
         this.maxHealthPoint = maxHealthPoint;
         this.currentHealthPoint = maxHealthPoint;
+        System.out.println("Neutral character");
     }
 
     public void setCurrentHealthPoint(int currentHealthPoint) {
