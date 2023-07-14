@@ -5,6 +5,10 @@ public interface Mana {
 
     void showMaxManaLevel();
 
+    int getCurrentManaLevel();
+
+    int getMaxManaLevel();
+
     void increaseManaLevel(int points);
 
     void decreaseManaLevel(int points);
